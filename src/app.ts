@@ -15,7 +15,6 @@ class App {
     let scene = this.createScene(engine, canvas);
 
     // register event handlers
-    this.registerResizeWindowHandler(engine);
     this.registerInspectorHandler(scene);
 
     // run the main render loop
@@ -44,12 +43,6 @@ class App {
     sphere.position.y = 0.5;
 
     return scene;
-  }
-
-  private registerResizeWindowHandler(engine: Engine) {
-    window.addEventListener("resize", () => {
-      engine.resize();
-    });
   }
 
   private registerInspectorHandler(scene: Scene) {
