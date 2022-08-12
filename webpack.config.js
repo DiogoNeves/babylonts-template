@@ -19,7 +19,12 @@ module.exports = {
     hot: true,
     devMiddleware: {
       publicPath: "/",
-    }
+    },
+    allowedHosts: [
+      ".repl.it",
+      ".repl.co",
+      ".repl.run"
+    ]
   },
   module: {
     rules: [
