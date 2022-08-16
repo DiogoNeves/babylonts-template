@@ -16,6 +16,7 @@ class App {
 
     // register event handlers
     this.registerInspectorHandler(scene);
+    this.registerResizeHandler(engine);
 
     // run the main render loop
     engine.runRenderLoop(() => {
@@ -55,6 +56,16 @@ class App {
           scene.debugLayer.show();
         }
       }
+    });
+  }
+
+  private registerResizeHandler(engine: Engine) {
+    window.addEventListener("resize", () => {
+      if (!engine) {
+        return;
+      }
+
+      engine.resize();
     });
   }
 }
