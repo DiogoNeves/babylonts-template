@@ -1,3 +1,5 @@
+This template is now archived! You should use the better template at https://github.com/RaananW/babylonjs-webpack-es6 
+
 # Babylon TS Template
 
 > A template for creating Babylon TS projects.
